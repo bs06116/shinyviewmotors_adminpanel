@@ -24,8 +24,8 @@ class UserController extends Controller
                             ->addColumn('first_name', function(User $data) {
                                 return '<strong>'.$data->first_name.'</strong>';
                             })
-                            ->addColumn('username', function(User $data) {
-                                return '<span>'.$data->username.'</span>';
+                            ->addColumn('last_name', function(User $data) {
+                                return '<span>'.$data->last_name.'</span>';
                             })
                             ->addColumn('email', function(User $data) {
                                 return '<span>'.$data->email.'</span>';
@@ -33,10 +33,21 @@ class UserController extends Controller
                             ->addColumn('phone', function(User $data) {
                                 return '<span>'.$data->phone.'</span>';
                             })
+                             ->addColumn('status', function(User $data) {
+                                 if ($data->status == 0) {
+                                     $class = 'drop-danger';
+                                 }else {
+                                     $class = 'drop-success';
+                                 }
+                                 $s = $data->status == 1 ? 'selected' : '';
+                                 $ns = $data->status == 0 ? 'selected' : '';
+                                 return '<div class="action-list"><select class="process select droplinks '.$class.'"><option data-val="1" value="'. route('admin-user-status',['id1' => $data->id, 'id2' => 1]).'" '.$s.'>Approve</option>
+    <option data-val="0" value="'. route('admin-user-status',['id1' => $data->id, 'id2' => 0]).'" '.$ns.'>Disable</option></select></div>';
+                             })
                             ->addColumn('action', function(User $data) {
                                 return '<div class="action-list"><a data-href="' . route('admin-user-edit',$data->id) . '" class="edit" data-toggle="modal" data-target="#modal1"> <i class="fas fa-edit"></i>Edit</a></div>';
                             })
-                            ->rawColumns(['first_name','username','email','phone','status', 'action'])
+                            ->rawColumns(['first_name','last_name','email','phone','status', 'action'])
                             ->toJson(); //--- Returning Json Data To Client Side
     }
 

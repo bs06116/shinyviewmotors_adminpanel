@@ -118,13 +118,6 @@
 								</ul>
 							</li>
 
-							<li>
-								<a href="{{ route('admin-pricing-index') }}" class="wave-effect active"><i class="fas fa-tags"></i> Pricing Ranges</a>
-							</li>
-
-							<li>
-								<a href="{{ route('admin-plan-index') }}" class="wave-effect active"><i class="fa fa-tasks" aria-hidden="true"></i>Plan Management</a>
-							</li>
 
 							<li>
 								<a href="#car" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
@@ -153,123 +146,8 @@
 								<a href="{{ route('admin-user-index') }}" class="wave-effect active"><i class="fas fa-users"></i>Sellers Management</a>
 							</li>
 
-{{--							<li>--}}
-{{--								<a href="#general" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">--}}
-{{--									<i class="fas fa-cogs"></i>General Settings--}}
-{{--								</a>--}}
-{{--								<ul class="collapse list-unstyled" id="general" data-parent="#accordion">--}}
-{{--                    <li>--}}
-{{--                    	<a href="{{ route('admin-gs-logo') }}"><span>Logo</span></a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                    	<a href="{{ route('admin-gs-fav') }}"><span>Favicon</span></a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                    	<a href="{{ route('admin-gs-load') }}"><span>Loader</span></a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                    	<a href="{{ route('admin-gs-bread') }}"><span>Breadcrumb</span></a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                    <a href="{{ route('admin-gs-contents') }}"><span>Website Contents</span></a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                    <a href="{{ route('admin-gs-payment') }}"><span>Payment Informations</span></a>--}}
-{{--                    </li>--}}
-{{--										<li>--}}
-{{--											<a href="{{ route('admin-gs-footer') }}"><span>Footer</span></a>--}}
-{{--										</li>--}}
-{{--										<li>--}}
-{{--											<a href="{{route('admin-gs-socialsetting')}}"><span>Social Link Settings</span></a>--}}
-{{--										</li>--}}
-{{--								</ul>--}}
-{{--							</li>--}}
 
-{{--							<li>--}}
-{{--								<a href="#homepage" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">--}}
-{{--									<i class="fas fa-home"></i>Home Page Settings--}}
-{{--								</a>--}}
-{{--								<ul class="collapse list-unstyled" id="homepage" data-parent="#accordion">--}}
-{{--									<li>--}}
-{{--										<a href="{{ route('admin-ps-header') }}"><span>Header Banner</span></a>--}}
-{{--									</li>--}}
-{{--									<li>--}}
-{{--										<a href="{{ route('admin-ps-featured_cars') }}"><span>Featured Cars Section</span></a>--}}
-{{--									</li>--}}
-{{--									<li>--}}
-{{--										<a href="{{ route('admin-ps-latest_cars') }}"><span>Latest Cars Section</span></a>--}}
-{{--									</li>--}}
-{{--                  <li>--}}
-{{--                  	<a href="{{ route('admin-tstm-index') }}"><span>Testimonial Management</span></a>--}}
-{{--                  </li>--}}
-{{--									<li>--}}
-{{--										<a href="{{ route('admin-ps-blogsection') }}"><span>Blog Section</span></a>--}}
-{{--									</li>--}}
-{{--								</ul>--}}
-{{--							</li>--}}
 
-{{--							<li>--}}
-{{--								<a href="#menu" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">--}}
-{{--									<i class="far fa-file"></i>Menu Page Settings--}}
-{{--								</a>--}}
-{{--								<ul class="collapse list-unstyled" id="menu" data-parent="#accordion">--}}
-{{--                    <li>--}}
-{{--                    	<a href="{{ route('admin-faq-index') }}"><span>FAQ Page</span></a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                    	<a href="{{ route('admin-ps-contact') }}"><span>Contact Page</span></a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                    	<a href="{{ route('admin-page-index') }}"><span>Other Pages</span></a>--}}
-{{--                    </li>--}}
-{{--								</ul>--}}
-{{--							</li>--}}
-
-							<li>
-								<a href="#emails" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
-									<i class="fas fa-at"></i>Email Settings
-								</a>
-								<ul class="collapse list-unstyled" id="emails" data-parent="#accordion">
-                  <li><a href="{{route('admin-mail-index')}}"><span>Email Template</span></a></li>
-                  <li><a href="{{route('admin-mail-config')}}"><span>Email Configurations</span></a></li>
-                  <li><a href="{{route('admin-group-show')}}"><span>Group Email</span></a></li>
-								</ul>
-							</li>
-							{{--<li>
-								<a href="{{ route('admin-lang-edit',1) }}"><i class="fas fa-language"></i>Language Settings</a>
-							</li>--}}
-
-{{--							<li>--}}
-{{--								<a href="#blog" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">--}}
-{{--									<i class="fas fa-fw fa-newspaper"></i>Blog--}}
-{{--								</a>--}}
-{{--								<ul class="collapse list-unstyled" id="blog" data-parent="#accordion">--}}
-{{--									<li>--}}
-{{--										<a href="{{ route('admin-cblog-index') }}"><span>Categories</span></a>--}}
-{{--									</li>--}}
-{{--									<li>--}}
-{{--										<a href="{{ route('admin-blog-index') }}"><span>Posts</span></a>--}}
-{{--									</li>--}}
-{{--								</ul>--}}
-{{--							</li>--}}
-							<li>
-								<a href="#seoTools" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
-									<i class="fas fa-wrench"></i>SEO Tools
-								</a>
-								<ul class="collapse list-unstyled" id="seoTools" data-parent="#accordion">
-                    <li>
-                    	<a href="{{ route('admin-seotool-analytics') }}"><span>Google Analytics</span></a>
-                    </li
-                    >
-                    <li>
-                    	<a href="{{ route('admin-seotool-keywords') }}"><span>Website Meta Keywords</span></a>
-                    </li>
-								</ul>
-							</li>
-
-							<li>
-								<a href="{{ route('admin-payment-index') }}" class="wave-effect active"><i class="fas fa-money-check-alt"></i>Payment History</a>
-							</li>
 						</ul>
 					</nav>
 					<!-- Main Content Area Start -->

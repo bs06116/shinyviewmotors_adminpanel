@@ -43,7 +43,7 @@ class CarController extends Controller
                                return '<strong>'.$title.'</strong>';
                            })
                            ->editColumn('seller', function(Car $data) {
-                               return '<strong>'.$data->user->username.'</strong>';
+                               return '<strong>'.$data->user->first_name.' '.$data->user->last_name.'</strong>';
                            })
                            ->editColumn('brand', function(Car $data) {
                                return '<span>'.$data->brand->name.'</span>';
@@ -68,7 +68,8 @@ class CarController extends Controller
                               return '<div class="action-list"><select class="process select droplinks '.$class.'"><option data-val="1" value="'. route('admin.car.status',['id1' => $data->id, 'id2' => 1]).'" '.$s.'>Approve</option><option data-val="2" value="'. route('admin.car.status',['id1' => $data->id, 'id2' => 2]).'" '.$ps.'>Pending</option><option data-val="0" value="'. route('admin.car.status',['id1' => $data->id, 'id2' => 0]).'" '.$ns.'>Reject</option></select></div>';
                           })
                           ->addColumn('action', function(Car $data) {
-                              return '<div class="action-list"><a href="' . route('admin.car.edit',$data->id) . '" class="edit"> <i class="fas fa-edit"></i>Edit</a><a href="javascript:;" data-href="' . route('admin.car.delete',$data->id) . '" data-toggle="modal" data-target="#confirm-delete" class="delete"><i class="fas fa-trash-alt"></i></a></div>';
+                              return '<div class="action-list">
+<a href="javascript:;" data-href="' . route('admin.car.delete',$data->id) . '" data-toggle="modal" data-target="#confirm-delete" class="delete"><i class="fas fa-trash-alt"></i></a></div>';
                           })
                           ->rawColumns(['title', 'seller', 'brand', 'feature', 'status','action'])
                           ->toJson(); //--- Returning Json Data To Client Side

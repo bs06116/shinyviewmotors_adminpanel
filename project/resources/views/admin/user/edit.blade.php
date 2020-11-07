@@ -57,58 +57,12 @@
                             </div>
                           </div>
                           <div class="col-lg-8">
-                            <input class="input-field myTags" type="text" name="phone" placeholder="Enter Phone Numbers" value="{{ $data->phone }}">
+                            <input class="input-field" type="text" name="phone" placeholder="Enter Phone Numbers" value="{{ $data->phone }}">
                           </div>
                         </div>
                         <br>
 
-                        <div class="row">
-                          <div class="col-lg-3">
-                            <div class="left-area">
-                                <h4 class="heading">Address </h4>
-                            </div>
-                          </div>
-                          <div class="col-lg-8">
-                            <input class="input-field" type="text" name="address" placeholder="Enter Address" value="{{ $data->address }}">
-                          </div>
-                        </div>
-                        <br>
 
-                        <div class="row">
-                          <div class="col-lg-3">
-                            <div class="left-area">
-                                <h4 class="heading">Latitude </h4>
-                            </div>
-                          </div>
-                          <div class="col-lg-8">
-                            <input class="input-field" type="text" name="latitude" placeholder="Enter Latitude" value="{{ $data->latitude }}">
-                          </div>
-                        </div>
-                        <br>
-
-                        <div class="row">
-                          <div class="col-lg-3">
-                            <div class="left-area">
-                                <h4 class="heading">Longitude </h4>
-                            </div>
-                          </div>
-                          <div class="col-lg-8">
-                            <input class="input-field" type="text" name="longitude" placeholder="Enter Longitude" value="{{ $data->longitude }}">
-                          </div>
-                        </div>
-                        <br>
-
-                        <div class="row">
-                          <div class="col-lg-3">
-                            <div class="left-area">
-                                <h4 class="heading">About </h4>
-                            </div>
-                          </div>
-                          <div class="col-lg-8">
-                            <textarea name="about" class="form-control" rows="8" cols="80">{{ $data->about }}</textarea>
-                          </div>
-                        </div>
-                        <br>
 
                         <div class="row">
                           <div class="col-lg-3">

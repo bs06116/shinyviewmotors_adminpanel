@@ -207,60 +207,10 @@ Route::get('/checkvalidity', 'Front\FrontendController@checkvalidity')->name('fr
   //------------ ADMIN USER MANAGEMENT ENDS------------
 
 
-  //------------ ADMIN TRANSACTION LOG ------------
-
-  Route::get('/payment/datatables', 'Admin\TransactionController@datatables')->name('admin-payment-datatables'); //JSON REQUEST
-  Route::get('/payment', 'Admin\TransactionController@index')->name('admin-payment-index');
-
-  //------------ ADMIN TRANSACTION LOG------------
 
 
-  //------------ ADMIN GENERAL SETTINGS SECTION ------------
-
-  Route::get('/general-settings/logo', 'Admin\GeneralSettingController@logo')->name('admin-gs-logo');
-  Route::get('/general-settings/favicon', 'Admin\GeneralSettingController@fav')->name('admin-gs-fav');
-  Route::get('/general-settings/loader', 'Admin\GeneralSettingController@load')->name('admin-gs-load');
-  Route::get('/general-settings/breadcrumb', 'Admin\GeneralSettingController@bread')->name('admin-gs-bread');
-  Route::get('/general-settings/contents', 'Admin\GeneralSettingController@contents')->name('admin-gs-contents');
-  Route::get('/general-settings/payment', 'Admin\GeneralSettingController@payment')->name('admin-gs-payment');
-  Route::get('/general-settings/socialsetting', 'Admin\GeneralSettingController@socialsetting')->name('admin-gs-socialsetting');
-  Route::get('/footer', 'Admin\GeneralSettingController@footer')->name('admin-gs-footer');
 
 
-  Route::post('/general-settings/update/all', 'Admin\GeneralSettingController@generalupdate')->name('admin-gs-update');
-
-
-  Route::get('/general-settings/disqus/{status}', 'Admin\GeneralSettingController@isdisqus')->name('admin-gs-isdisqus');
-  Route::get('/general-settings/loader/{status}', 'Admin\GeneralSettingController@isloader')->name('admin-gs-isloader');
-  Route::get('/general-settings/aloader/{status}', 'Admin\GeneralSettingController@isaloader')->name('admin-gs-isaloader');
-  Route::get('/general-settings/talkto/{status}', 'Admin\GeneralSettingController@talkto')->name('admin-gs-talkto');
-  //------------ ADMIN GENERAL SETTINGS JSON SECTION ------------
-
-
-  //------------ ADMIN TESTIMONIAL SECTION ------------
-
-  Route::get('/testimonial/datatables', 'Admin\TestimonialController@datatables')->name('admin-tstm-datatables');
-  Route::get('/testimonial', 'Admin\TestimonialController@index')->name('admin-tstm-index');
-  Route::get('/testimonial/create', 'Admin\TestimonialController@create')->name('admin-tstm-create');
-  Route::post('/testimonial/create', 'Admin\TestimonialController@store')->name('admin-tstm-store');
-  Route::get('/testimonial/edit/{id}', 'Admin\TestimonialController@edit')->name('admin-tstm-edit');
-  Route::post('/testimonial/edit/{id}', 'Admin\TestimonialController@update')->name('admin-tstm-update');
-  Route::get('/testimonial/delete/{id}', 'Admin\TestimonialController@destroy')->name('admin-tstm-delete');
-  Route::get('/testimonial/status/{id1}/{id2}', 'Admin\TestimonialController@status')->name('admin-tstm-status');
-
-  //------------ ADMIN TESTIMONIAL SECTION ENDS------------
-
-  //------------ ADMIN PAGE SETTINGS SECTION ------------
-
-  Route::get('/header', 'Admin\PageSettingController@header_banner')->name('admin-ps-header');
-  Route::get('/featured-cars', 'Admin\PageSettingController@featured_cars')->name('admin-ps-featured_cars');
-  Route::get('/latest-cars', 'Admin\PageSettingController@latest_cars')->name('admin-ps-latest_cars');
-  Route::get('/blog-section', 'Admin\PageSettingController@blogsection')->name('admin-ps-blogsection');
-  Route::get('/contact', 'Admin\PageSettingController@contact')->name('admin-ps-contact');
-  Route::get('/iscontact/{status}', 'Admin\PageSettingController@iscontact')->name('admin-ps-iscontact');
-  Route::post('/page-settings/update/all', 'Admin\PageSettingController@update')->name('admin-ps-update');
-  Route::post('/page-settings/update/contact', 'Admin\PageSettingController@upcontact')->name('admin-ps-upcontact');
-  //------------ ADMIN PAGE SETTINGS SECTION ENDS ------------
 
 
   //------------ ADMIN EMAIL SETTINGS SECTION ------------
@@ -277,66 +227,6 @@ Route::get('/checkvalidity', 'Front\FrontendController@checkvalidity')->name('fr
   //------------ ADMIN EMAIL SETTINGS SECTION ENDS ------------
 
 
-  //------------ ADMIN FAQ SECTION ------------
-
-  Route::get('/faq/datatables', 'Admin\FaqController@datatables')->name('admin-faq-datatables'); //JSON REQUEST
-  Route::get('/faq', 'Admin\FaqController@index')->name('admin-faq-index');
-  Route::get('/faq/create', 'Admin\FaqController@create')->name('admin-faq-create');
-  Route::post('/faq/create', 'Admin\FaqController@store')->name('admin-faq-store');
-  Route::get('/faq/edit/{id}', 'Admin\FaqController@edit')->name('admin-faq-edit');
-  Route::post('/faq/update/{id}', 'Admin\FaqController@update')->name('admin-faq-update');
-  Route::get('/faq/delete/{id}', 'Admin\FaqController@destroy')->name('admin-faq-delete');
-  Route::get('/general-settings/faq/{status}', 'Admin\FaqController@isfaq')->name('admin-isfaq');
-
-  //------------ ADMIN FAQ SECTION ENDS ------------
-
-
-  //------------ ADMIN PAGE SECTION ------------
-
-  Route::get('/page/datatables', 'Admin\PageController@datatables')->name('admin-page-datatables'); //JSON REQUEST
-  Route::get('/page', 'Admin\PageController@index')->name('admin-page-index');
-  Route::get('/page/create', 'Admin\PageController@create')->name('admin-page-create');
-  Route::post('/page/create', 'Admin\PageController@store')->name('admin-page-store');
-  Route::get('/page/edit/{id}', 'Admin\PageController@edit')->name('admin-page-edit');
-  Route::post('/page/update/{id}', 'Admin\PageController@update')->name('admin-page-update');
-  Route::get('/page/delete/{id}', 'Admin\PageController@destroy')->name('admin-page-delete');
-  Route::get('/page/header/{id1}/{id2}', 'Admin\PageController@header')->name('admin-page-header');
-  Route::get('/page/footer/{id1}/{id2}', 'Admin\PageController@footer')->name('admin-page-footer');
-
-  //------------ ADMIN PAGE SECTION ENDS------------
-
-
-  //------------ ADMIN SOCIAL SETTINGS SECTION ------------
-
-  Route::get('/social', 'Admin\SocialSettingController@index')->name('admin-social-index');
-  Route::post('/social/update', 'Admin\SocialSettingController@socialupdate')->name('admin-social-update');
-
-  //------------ ADMIN SOCIAL SETTINGS SECTION ENDS------------
-
-
-  //------------ ADMIN LANGUAGE SETTINGS SECTION ------------
-
-  Route::get('/languages/datatables', 'Admin\LanguageController@datatables')->name('admin-lang-datatables'); //JSON REQUEST
-  Route::get('/languages', 'Admin\LanguageController@index')->name('admin-lang-index');
-  Route::get('/languages/create', 'Admin\LanguageController@create')->name('admin-lang-create');
-  Route::get('/languages/edit/{id}', 'Admin\LanguageController@edit')->name('admin-lang-edit');
-  Route::post('/languages/create', 'Admin\LanguageController@store')->name('admin-lang-store');
-  Route::get('/languages/status/{id1}/{id2}', 'Admin\LanguageController@status')->name('admin-lang-st');
-  Route::get('/languages/delete/{id}', 'Admin\LanguageController@destroy')->name('admin-lang-delete');
-  Route::post('/languages/edit/{id}', 'Admin\LanguageController@update')->name('admin-lang-update');
-
-  //------------ ADMIN LANGUAGE SETTINGS SECTION ENDS ------------
-
-  //------------ ADMIN SEOTOOL SETTINGS SECTION ------------
-
-  Route::get('/seotools/analytics', 'Admin\SeoToolController@analytics')->name('admin-seotool-analytics');
-  Route::get('/seotools/keywords', 'Admin\SeoToolController@keywords')->name('admin-seotool-keywords');
-  Route::post('/seotools/analytics/update', 'Admin\SeoToolController@analyticsupdate')->name('admin-seotool-analytics-update');
-  Route::post('/seotools/keywords/update', 'Admin\SeoToolController@keywordsupdate')->name('admin-seotool-keywords-update');
-  //------------ ADMIN SEOTOOL SETTINGS SECTION ------------
-
-
-//});
 
 
 // ************************************ ADMIN SECTION ENDS**********************************************
